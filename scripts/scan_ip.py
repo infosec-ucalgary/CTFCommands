@@ -9,7 +9,14 @@ import sys
 def main():
     # usage: ./scan_ip.py <ip> [OPTIOMS]
     # note: there are no options currently :/
+
+    if len(sys.argv) == 0:
+        print("Please specify an ip to scan")
+        print("Usage scan_ip.py <ip>")
+        return
+
     ip = sys.argv[1]
+
     print(f"Scanning {ip}...")
     # file names
     folder_name = "scans"
