@@ -29,11 +29,12 @@ def main():
 
     print(f"Scanning {ip}...")
     # file names
-    folder_name = "scans"
+    folder_name = f"scans-{ip}"
     initial_scan = "initial"
     deep_scan = "deep_scan"
     deepest_scan = "deepest_scan"
 
+    # check for existing folder/files
     if not os.path.exists(folder_name): os.makedirs(folder_name)
 
     scan_exists = os.path.isfile(f"{folder_name}/{initial_scan}") or os.path.isfile(f"{folder_name}/{deep_scan}")
