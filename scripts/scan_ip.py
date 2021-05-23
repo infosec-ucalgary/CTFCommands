@@ -43,11 +43,11 @@ def main():
         return
 
     if run_default or run_initial:
-        subp.run(f"nmap {ip} -sV -sC -oN {folder_name}/{initial_scan}", shell=True, check=True)
+        subp.run(f"nmap {ip} -sV -sC -vv -oN {folder_name}/{initial_scan}", shell=True, check=True)
     if run_default or run_deep:
-        subp.run(f"nmap {ip} -Pn -A -p- -oN {folder_name}/{deep_scan}", shell=True, check=True)
+        subp.run(f"nmap {ip} -Pn -A -p- -vv -oN {folder_name}/{deep_scan}", shell=True, check=True)
     if run_deepest:
-        subp.run(f"nmap {ip} -sV -sC -Pn -p- -A -oN {folder_name}/{deepest_scan}", shell=True, check=True)
+        subp.run(f"nmap {ip} -sV -sC -Pn -p- -A -vv -oN {folder_name}/{deepest_scan}", shell=True, check=True)
 
     return
 
