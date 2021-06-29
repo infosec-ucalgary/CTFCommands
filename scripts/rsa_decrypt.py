@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # created by e-seng on github
+# with help from https://www.educative.io/edpresso/what-is-the-rsa-algorithm
 import sys
 
 class Encrypt_Data_Holder:
